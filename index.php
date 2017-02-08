@@ -19,7 +19,7 @@
 	if ($query) {	
 		$servername = 'localhost';
 		$username = 'root';
-		$password = 'erenesto';
+		$password = 'password';
 		$dbname = 'alumni';
 		// Create connection
 		$conn = new mysqli($servername, $username, $password, $dbname);

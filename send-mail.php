@@ -18,7 +18,7 @@ $headers .= "From: <".$from. ">" ;
 
 $smtp = Mail::factory('smtp', array(
         'host' => 'smtp.gmail.com',
-        'port' => '465',
+        'port' => '587',
         'auth' => true,
         'username' => 'EMAIL',
         'password' => 'PASSWORD'
