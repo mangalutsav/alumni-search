@@ -17,7 +17,7 @@ $headers .= "Content-type: text/html; charset=UTF-8\r\n";
 $headers .= "From: <".$from. ">" ;
 
 $smtp = Mail::factory('smtp', array(
-        'host' => 'ssl://smtp.gmail.com',
+        'host' => 'smtp.gmail.com',
         'port' => '465',
         'auth' => true,
         'username' => 'EMAIL',
