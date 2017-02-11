@@ -20,8 +20,8 @@ $smtp = Mail::factory('smtp', array(
         'host' => 'smtp.gmail.com',
         'port' => '587',
         'auth' => true,
-        'username' => 'EMAIL',
-        'password' => 'PASSWORD'
+        'username' => 'Alumnicell@iitr.ac.in',
+        'password' => 'abc123'
     ));
 
 $mail = $smtp->send($to, $headers, $msg);

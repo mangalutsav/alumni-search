@@ -19,7 +19,7 @@
 	if ($query) {	
 		$servername = 'localhost';
 		$username = 'root';
-		$password = 'password';
+		$password = 'erenesto';
 		$dbname = 'alumni';
 		// Create connection
 		$conn = new mysqli($servername, $username, $password, $dbname);
@@ -55,7 +55,7 @@
 	            	while ($row = mysqli_fetch_array($results)) {
 					echo '
 						<form method="post" action="form.php" class="inline">
-		  				<input type="hidden" name="email" value="'.$row["email"].'">
+		  				<input type="hidden" name="email" value="'.$row["Toemail"].'">
 		  				<button type="submit" name="submit_param" value="submit_value" class="link-button">
 		    				Name:'.$row["name"].' Branch: '.$row["branch"].' Place: '.$row["place"].' Job: '.$row["job"].' Groups:'.$row["groups"].'
 		  				</button>
