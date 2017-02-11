@@ -55,7 +55,7 @@
 	            	while ($row = mysqli_fetch_array($results)) {
 					echo '
 						<form method="post" action="form.php" class="inline">
-		  				<input type="hidden" name="email" value="'.$row["Toemail"].'">
+		  				<input type="hidden" name="semail" value="'.$row["email"].'">
 		  				<button type="submit" name="submit_param" value="submit_value" class="link-button">
 		    				Name:'.$row["name"].' Branch: '.$row["branch"].' Place: '.$row["place"].' Job: '.$row["job"].' Groups:'.$row["groups"].'
 		  				</button>

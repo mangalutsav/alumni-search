@@ -3,29 +3,8 @@
 <head>
 	<title></title>
 </head>
-<?php
-    $msg = '';
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $msg = "NAME: "  .test_input($_POST['name']  )  ."<br>\n";
-        $msg .= "EMAIL: "  .test_input($_POST['course'])    ."<br>\n";
-        $msg .= "WEBSITE: "  .test_input($_POST['email'])    ."<br>\n"; 
-        $msg .= "COMMENTS: "  .test_input($_POST['comments'])    ."<br>\n";
-    }
-    function test_input($data) {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
-    $subject = "A new query"
-    $to = $_POST['Toemail'];
-    $headers  = 'From:  Alumnicell@iitr.ac.in' . "\r\n";
-    $headers .= 'Reply-To: Alumnicell@iitr.ac.in' . "\r\n" .;
-    $headers .= 'X-Mailer: PHP/' . phpversion();
-    mail($to, $subject, $msg, $headers);
-?>
 <body>
-  <form id="contactForm" action="'<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>'" method="POST">
+  <form id="contactForm" action="send-mail.php" method="POST">
                 <fieldset>                      
                     <p>
                         <label for="name" >Name</label>
@@ -43,9 +22,9 @@
                         <label for="comments">Message</label>
                         <textarea  name="comments"  id="comments" rows="5" cols="20" class="form-poshytip" title="Enter your Message"></textarea>
                     </p>
-                    <button type="submit" name="submit"></button>
+                    <input type="hidden" value=<?php echo $_POST['semail']?>" name="to" id="to" />
                 </fieldset>
-
+                <button type="submit" name="submit"></button>
     </form>
 </body>
 </html>
